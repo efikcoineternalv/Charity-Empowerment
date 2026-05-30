@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity Empowerment by Efikcoin Eternal - Real Value Onchain</title>
+  <meta name="description" content="Charity Empowerment: Global blockchain charity. Donate BNB, empower communities, earn rewards. 100% transparent onchain aid.">
+  <link rel="icon" href="https://ipfs.io/ipfs/bafybeidiolwq4be5h2mvqevcqosltona4v5wrlsy27wy5dk2lhatzkoaju">
+  <style>
+    :root {
+      --gold: #d4af37;
+      --gold-light: #f4cf57;
+      --dark: #0a0a0a;
+      --dark-2: #1a1a1a;
+      --dark-3: #111;
+    }
+    * {margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+    body {font-family:'Inter', -apple-system, sans-serif; background:var(--dark); color:#fff; line-height:1.6}
+    .container {max-width:1200px;margin:0 auto;padding:0 20px}
+    header {background:rgba(10,10,10,0.95);backdrop-filter:blur(10px);padding:15px 0;border-bottom:1px solid #333;position:sticky;top:0;z-index:1000}
+    .nav {display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
+    .logo {display:flex;align-items:center;gap:12px}
+    .logo img {width:45px;height:45px;border-radius:50%;border:2px solid var(--gold)}
+    .logo h1 {font-size:1.3rem;color:var(--gold);font-weight:700}
+    .logo span {display:block;font-size:0.8rem;color:#aaa;font-weight:400}
+    .nav-links {display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+    .nav-links a {color:#ddd;text-decoration:none;font-weight:500;transition:0.2s}
+    .nav-links a:hover {color:var(--gold)}
+    .btn {background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#000;padding:12px 28px;border:none;border-radius:50px;font-weight:700;cursor:pointer;font-size:1rem;transition:0.3s;text-decoration:none;display:inline-block}
+    .btn:hover {transform:translateY(-2px);box-shadow:0 10px 25px rgba(212,175,55,0.3)}
+    .btn-outline {background:transparent;border:2px solid var(--gold);color:var(--gold)}
+    .btn-outline:hover {background:var(--gold);color:#000}
+    .hero {padding:120px 0 80px;text-align:center;background:radial-gradient(circle at top,#1a1a1a,#000);position:relative;overflow:hidden}
+    .hero::after {content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('https://ipfs.io/ipfs/bafybeidiolwq4be5h2mvqevcqosltona4v5wrlsy27wy5dk2lhatzkoaju') center/400px no-repeat;opacity:0.05;z-index:1}
+    .hero-content {position:relative;z-index:2}
+    .hero h2 {font-size:3.5rem;color:var(--gold);margin-bottom:20px;font-weight:900;line-height:1.1}
+    .hero p {font-size:1.3rem;max-width:750px;margin:0 auto 35px;color:#ccc}
+    .badge {background:rgba(212,175,55,0.15);border:1px solid var(--gold);color:var(--gold);padding:8px 20px;border-radius:50px;display:inline-block;margin-bottom:25px;font-weight:600}
+    section {padding:90px 0}
+    .section-title {text-align:center;font-size:2.8rem;color:var(--gold);margin-bottom:15px;font-weight:800}
+    .section-sub {text-align:center;color:#aaa;max-width:700px;margin:0 auto 60px;font-size:1.1rem}
+    .grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px}
+    .card {background:var(--dark-2);padding:35px;border-radius:20px;border:1px solid #2a2a2a;transition:0.3s}
+    .card:hover {transform:translateY(-5px);border-color:var(--gold)}
+    .card h3 {color:var(--gold);margin:15px 0;font-size:1.4rem}
+    .icon {font-size:2.5rem;margin-bottom:10px}
+    .stats {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;margin:50px 0}
+    .stat {text-align:center;background:var(--dark-2);padding:30px;border-radius:15px;border:1px solid #2a2a2a}
+    .stat h4 {font-size:3rem;color:var(--gold);font-weight:900}
+    .stat p {color:#aaa;margin-top:5px}
+    .tiers {display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin-top:40px}
+    .tier {background:var(--dark-2);border-radius:20px;padding:35px;border:2px solid #333;position:relative;text-align:center}
+    .tier.featured {border-color:var(--gold);transform:scale(1.05)}
+    .tier.featured::before {content:'Most Impact';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:#000;padding:5px 20px;border-radius:50px;font-size:0.8rem;font-weight:700}
+    .tier h3 {color:var(--gold);font-size:1.8rem;margin-bottom:10px}
+    .tier .price {font-size:2.2rem;font-weight:900;margin:15px 0}
+    .tier ul {list-style:none;text-align:left;margin:25px 0}
+    .tier li {padding:8px 0;border-bottom:1px solid #2a2a2a}
+    .tier li:before {content:'✓';color:var(--gold);font-weight:bold;margin-right:10px}
+    .donate-box {background:linear-gradient(145deg,#1a1a1a,#111);padding:50px;border-radius:25px;border:2px solid var(--gold);text-align:center;max-width:650px;margin:0 auto;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+    .wallet {background:#000;padding:18px;border-radius:12px;margin:25px 0;word-break:break-all;font-family:monospace;border:1px solid #333;font-size:0.95rem}
+    .copy-btn {background:#333;color:#fff;padding:12px 25px;border:none;border-radius:10px;cursor:pointer;margin:10px 5px;font-weight:600}
+    .copy-btn:hover {background:var(--gold);color:#000}
+    #qr {margin:25px auto;width:220px;height:220px;background:#fff;padding:15px;border-radius:15px}
+    .impact-bar {background:#222;border-radius:50px;height:12px;margin:30px 0;overflow:hidden}
+    .impact-fill {background:linear-gradient(90deg,var(--gold),var(--gold-light));height:100%;width:68%;border-radius:50px}
+    footer {background:#000;padding:50px 0 30px;text-align:center;border-top:1px solid #222}
+    .footer-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;text-align:left;margin-bottom:40px}
+    .footer-grid h4 {color:var(--gold);margin-bottom:15px}
+    .footer-grid a {color:#aaa;text-decoration:none;display:block;margin:8px 0}
+    .footer-grid a:hover {color:var(--gold)}
+    #google_translate_element {margin-top:10px}
+    @media(max-width:768px){
+      .hero h2{font-size:2.2rem}
+      .section-title{font-size:2rem}
+      .tier.featured{transform:scale(1)}
+      .nav-links{gap:15px}
+      .logo h1{font-size:1.1rem}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <img src="https://ipfs.io/ipfs/bafybeidiolwq4be5h2mvqevcqosltona4v5wrlsy27wy5dk2lhatzkoaju" alt="ECE Logo">
+        <h1>Charity Empowerment <span>by Efikcoin Eternal</span></h1>
+      </div>
+      <div class="nav-links">
+        <a href="#impact">Impact</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#donate">Donate</a>
+        <a href="#transparency">Transparency</a>
+        <a href="https://bscscan.com/address/0x676cCf34C191a9D6EFE4B265b84877C619A559d0" target="_blank" class="btn">Track Treasury</a>
+        <div id="google_translate_element"></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="badge">🌍 Empowering Communities Worldwide</div>
+      <h2>Charity Empowerment</h2>
+      <p>We don’t just give aid — we empower people to build lasting change. Donate BNB, earn rewards, and track every impact 100% onchain. From Port Harcourt to the world.</p>
+      <a href="#donate" class="btn">Empower Someone Today</a>
+      <a href="#benefits" class="btn btn-outline">See Donor Benefits</a>
+    </div>
+  </section>
+
+  <section id="impact" style="background:var(--dark-3)">
+    <div class="container">
+      <h2 class="section-title">Empowerment in Action</h2>
+      <p class="section-sub">Not handouts. We fund education, tools, and opportunities. 100% of donations empower real people. 0% admin fees.</p>
+      <div class="stats">
+        <div class="stat"><h4 id="treasuryBalance">Loading...</h4><p>BNB Empowering Now</p></div>
+        <div class="stat"><h4>15+</h4><p>Communities Empowered</p></div>
+        <div class="stat"><h4>2,340+</h4><p>Lives Transformed</p></div>
+        <div class="stat"><h4>100%</h4><p>Onchain Verified</p></div>
+      </div>
+      <div class="impact-bar"><div class="impact-fill"></div></div>
+      <p style="text-align:center;color:#aaa">Current mission: Fund 50 student laptops + Web3 training across West Africa</p>
+    </div>
+  </section>
+
+  <section id="benefits">
+    <div class="container">
+      <h2 class="section-title">Empower Others, Get Empowered</h2>
+      <p class="section-sub">Your generosity comes with real benefits. We reward those who empower others.</p>
+      <div class="tiers">
+        <div class="tier">
+          <h3>Bronze Empowerer</h3>
+          <div class="price">0.1+ BNB</div>
+          <ul>
+            <li>Empowerer NFT Badge</li>
+            <li>Name on Global Donors Wall</li>
+            <li>Monthly Empowerment Report</li>
+            <li>Private Community Access</li>
+          </ul>
+          <a href="#donate" class="btn btn-outline">Start Empowering</a>
+        </div>
+        <div class="tier featured">
+          <h3>Gold Empowerer</h3>
+          <div class="price">1+ BNB</div>
+          <ul>
+            <li>Limited Gold Empowerer NFT</li>
+            <li>Vote on Which Projects We Fund</li>
+            <li>Quarterly Calls with Team</li>
+            <li>Early ECE Ecosystem Access</li>
+            <li>All Bronze Benefits</li>
+          </ul>
+          <a href="#donate" class="btn">Become Gold Empowerer</a>
+        </div>
+        <div class="tier">
+          <h3>Diamond Founder</h3>
+          <div class="price">5+ BNB</div>
+          <ul>
+            <li>1-of-1 Founder NFT + Physical Award</li>
+            <li>Board Advisory Seat</li>
+            <li>Revenue Share from ECE Pool</li>
+            <li>Name a School or Project</li>
+            <li>All Gold Benefits</li>
+          </ul>
+          <a href="#donate" class="btn btn-outline">Join Founders</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="donate" style="background:var(--dark-3)">
+    <div class="container">
+      <h2 class="section-title">Donate & Empower</h2>
+      <p class="section-sub">Your BNB creates entrepreneurs, funds education, and builds Web3 futures. Receive your Empowerer NFT within 24h.</p>
+      <div class="donate-box">
+        <h3 style="color:var(--gold);margin-bottom:10px;font-size:1.6rem">Official Empowerment Treasury</h3>
+        <p>BNB Smart Chain (BEP-20) Only</p>
+        <div class="wallet" id="walletAddress">0x676cCf34C191a9D6EFE4B265b84877C619A559d0</div>
+        <button class="copy-btn" onclick="copyWallet()">📋 Copy Address</button>
+        <button class="copy-btn" onclick="openWallet()">🦊 Open in Wallet</button>
+        <div id="qr"></div>
+        <p style="font-size:0.9rem;color:#aaa;margin-top:20px">⚠️ Only send BNB on BSC Network. Sending other tokens will result in permanent loss.</p>
+        <div style="margin-top:30px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+          <button class="btn" onclick="quickDonate('0.1')">Empower with 0.1 BNB</button>
+          <button class="btn" onclick="quickDonate('0.5')">Empower with 0.5 BNB</button>
+          <button class="btn" onclick="quickDonate('1')">Empower with 1 BNB</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="transparency">
+    <div class="container">
+      <h2 class="section-title">Radical Transparency</h2>
+      <p class="section-sub">Every BNB empowered in, every life empowered out. All verified on blockchain.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="icon">🏦</div>
+          <h3>Empowerment Treasury</h3>
+          <p style="word-break:break-all;font-size:0.9rem;color:#aaa">0x676cCf34C191a9D6EFE4B265b84877C619A559d0</p>
+          <a href="https://bscscan.com/address/0x676cCf34C191a9D6EFE4B265b84877C619A559d0" target="_blank" class="btn" style="margin-top:15px">Track Live</a>
+        </div>
+        <div class="card">
+          <div class="icon">📊</div>
+          <h3>Smart Contract Pool</h3>
+          <p style="word-break:break-all;font-size:0.9rem;color:#aaa">0xB666ebE67F95099a4e72e49b98adB93bB34EE5C6</p>
+          <a href="https://bscscan.com/address/0xB666ebE67F95099a4e72e49b98adB93bB34EE5C6" target="_blank" class="btn btn-outline" style="margin-top:15px">Audit Contract</a>
+        </div>
+        <div class="card">
+          <div class="icon">🪙</div>
+          <h3>ECE Token</h3>
+          <p style="word-break:break-all;font-size:0.9rem;color:#aaa">0x09D3DA67bB62B07427A13B5AA8d0fdd08870B2b4</p>
+          <a href="https://bscscan.com/token/0x09D3DA67bB62B07427A13B5AA8d0fdd08870B2b4" target="_blank" class="btn btn-outline" style="margin-top:15px">View Token</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Charity Empowerment</h4>
+          <p style="color:#aaa">Real Value Onchain. Empowering communities through Web3 from Port Harcourt to the world.</p>
+        </div>
+        <div>
+          <h4>Empower</h4>
+          <a href="#impact">Our Impact</a>
+          <a href="#benefits">Donor Benefits</a>
+          <a href="#donate">Donate BNB</a>
+          <a href="https://efikcoin-eternal.github.io/Efikcoineternalv2/" target="_blank">Efikcoin Eternal</a>
+        </div>
+        <div>
+          <h4>Verify</h4>
+          <a href="https://bscscan.com/address/0x676cCf34C191a9D6EFE4B265b84877C619A559d0" target="_blank">Treasury</a>
+          <a href="https://bscscan.com/address/0xB666ebE67F95099a4e72e49b98adB93bB34EE5C6" target="_blank">Pool Contract</a>
+          <a href="https://bscscan.com/token/0x09D3DA67bB62B07427A13B5AA8d0fdd08870B2b4" target="_blank">ECE Token</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="mailto:empower@efikcoineternal.com">empower@efikcoineternal.com</a>
+          <p style="color:#aaa;margin-top:10px">Port Harcourt, Nigeria</p>
+        </div>
+      </div>
+      <div style="border-top:1px solid #222;padding-top:30px;margin-top:30px">
+        <p>© 2026 Charity Empowerment by Efikcoin Eternal. Empowering humanity on BNB Smart Chain.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  <script>
+    const treasury = "0x676cCf34C191a9D6EFE4B265b84877C619A559d0";
+    
+    new QRCode(document.getElementById("qr"), {
+      text: treasury,
+      width: 200,
+      height: 200,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+
+    function copyWallet() {
+      navigator.clipboard.writeText(treasury).then(() => {
+        const btn = event.target;
+        const old = btn.textContent;
+        btn.textContent = '✅ Copied!';
+        btn.style.background = 'var(--gold)';
+        btn.style.color = '#000';
+        setTimeout(() => { btn.textContent = old; btn.style.background = '#333'; btn.style.color = '#fff'; }, 2000);
+      });
+    }
+
+    function openWallet() {
+      window.open(`https://metamask.app.link/send/${treasury}@56`, '_blank');
+    }
+
+    function quickDonate(amount) {
+      const url = `https://metamask.app.link/send/${treasury}@56?value=${amount}e18`;
+      window.open(url, '_blank');
+    }
+
+    async function getBalance() {
+      try {
+        const res = await fetch(`https://api.bscscan.com/api?module=account&action=balance&address=${treasury}&apikey=YourApiKeyToken`);
+        const data = await res.json();
+        if(data.status === "1") {
+          const bnb = (parseInt(data.result) / 1e18).toFixed(2);
+          document.getElementById('treasuryBalance').textContent = bnb;
+        }
+      } catch(e) {
+        document.getElementById('treasuryBalance').textContent = 'Track Live';
+      }
+    }
+    getBalance();
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,fr,es,pt,ar,zh-CN,hi,sw,yo,ig,ha,de,it,ja,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
