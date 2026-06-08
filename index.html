@@ -388,147 +388,48 @@
     </p>
   </div>
 </section>
-<!-- EFC POS V3 - GUARANTEED WORKING -->
-<section id="pos" style="background:#0d1117; padding:50px 20px; border-top:2px solid #f7b500;">
-  <div style="max-width:500px; margin:0 auto; background:#161b22; border:1px solid #f7b500; border-radius:16px; padding:30px;">
-    <h2 style="color:#f7b500; text-align:center; margin:0 0 20px 0;">EFC Live POS</h2>
-    <p style="text-align:center; color:#8b949e; margin-bottom:25px;">Real Payments → Your Wallet</p>
+<!-- EFC POS V5 - ZERO JAVASCRIPT -->
+<section id="pos" style="background:#0d1117; padding:40px 20px; border-top:2px solid #f7b500;">
+  <div style="max-width:450px; margin:0 auto; background:#161b22; border:2px solid #f7b500; border-radius:16px; padding:25px;">
+    <h2 style="color:#f7b500; text-align:center; margin:0 0 20px 0;">EFC Client Payment</h2>
+    <p style="text-align:center; color:#8b949e; margin-bottom:25px;">Click amount → Pay via MetaMask</p>
     
-    <div style="margin-bottom:15px;">
-      <label style="color:#c9d1d9; display:block; margin-bottom:8px;">Service</label>
-      <input id="posItemInput" type="text" value="Token Deployment" 
-             style="width:100%; padding:12px; background:#0d1117; border:1px solid #30363d; border-radius:8px; color:#fff; box-sizing:border-box;">
-    </div>
+    <p style="color:#c9d1d9; font-weight:600; margin-bottom:15px;">Token Deployment Service:</p>
     
-    <div style="margin-bottom:15px;">
-      <label style="color:#c9d1d9; display:block; margin-bottom:8px;">Amount USD</label>
-      <input id="posAmountInput" type="number" value="150" 
-             style="width:100%; padding:12px; background:#0d1117; border:1px solid #30363d; border-radius:8px; color:#fff; box-sizing:border-box;">
-    </div>
+    <!-- $50 Payment -->
+    <a href="https://metamask.app.link/send/0x676cCf34C191a9D6EFE4B265b84877C619A559d0@56?value=83000000000000000" 
+       target="_blank"
+       style="display:block; background:#21262d; border:1px solid #30363d; color:#f7b500; padding:15px; border-radius:10px; text-decoration:none; margin-bottom:12px; text-align:center; font-weight:600;">
+       Pay $50 → 0.083 BNB
+    </a>
     
-    <div style="margin-bottom:20px;">
-      <label style="color:#c9d1d9; display:block; margin-bottom:8px;">Pay With</label>
-      <select id="posTokenSelect" style="width:100%; padding:12px; background:#0d1117; border:1px solid #30363d; border-radius:8px; color:#fff; box-sizing:border-box;">
-        <option value="BNB">BNB</option>
-        <option value="USDT">USDT BEP20</option>
-        <option value="EFC">EFC Token</option>
-      </select>
-    </div>
+    <!-- $150 Payment -->
+    <a href="https://metamask.app.link/send/0x676cCf34C191a9D6EFE4B265b84877C619A559d0@56?value=250000000000000000" 
+       target="_blank"
+       style="display:block; background:#21262d; border:1px solid #30363d; color:#f7b500; padding:15px; border-radius:10px; text-decoration:none; margin-bottom:12px; text-align:center; font-weight:600;">
+       Pay $150 → 0.25 BNB
+    </a>
     
-    <button id="posGenerateBtn" 
-            style="width:100%; background:linear-gradient(45deg, #f7b500, #ff8c00); color:#000; padding:15px; font-weight:700; border:none; border-radius:10px; cursor:pointer; font-size:16px;">
-      Generate Payment Link
-    </button>
+    <!-- $300 Payment -->
+    <a href="https://metamask.app.link/send/0x676cCf34C191a9D6EFE4B265b84877C619A559d0@56?value=500000000000000000" 
+       target="_blank"
+       style="display:block; background:#21262d; border:1px solid #30363d; color:#f7b500; padding:15px; border-radius:10px; text-decoration:none; margin-bottom:12px; text-align:center; font-weight:600;">
+       Pay $300 → 0.5 BNB
+    </a>
     
-    <div id="posOutput" style="text-align:center; margin-top:25px; display:none;">
-      <p style="color:#f7b500; margin-bottom:10px; font-weight:600;">Client Pays:</p>
-      <div id="posQRBox" style="background:#fff; padding:15px; border-radius:12px; display:inline-block; margin-bottom:15px;"></div>
-      <p id="posAmountText" style="color:#3fb950; font-weight:600; margin:10px 0;"></p>
-      <a id="posPayLink" target="_blank" 
-         style="display:block; background:#21262d; color:#58a6ff; padding:12px; border-radius:8px; text-decoration:none; word-break:break-all; font-size:13px; border:1px solid #30363d;">
-      </a>
-      <button id="posCopyBtn" style="background:#f7b500; color:#000; border:none; padding:10px 20px; border-radius:6px; margin-top:12px; cursor:pointer; font-weight:600;">Copy Link</button>
-    </div>
+    <!-- USDT $150 Payment -->
+    <a href="https://metamask.app.link/send/0x55d398326f99059fF775485246999027B3197955@56/transfer?address=0x676cCf34C191a9D6EFE4B265b84877C619A559d0&uint256=150000000000000000000" 
+       target="_blank"
+       style="display:block; background:#30363d; border:1px solid #f7b500; color:#3fb950; padding:15px; border-radius:10px; text-decoration:none; margin-bottom:12px; text-align:center; font-weight:600;">
+       Pay $150 USDT
+    </a>
     
-    <p id="posStatus" style="text-align:center; color:#8b949e; font-size:14px; margin-top:15px;"></p>
+    <p style="color:#8b949e; font-size:13px; text-align:center; margin-top:20px;">
+      Click amount → MetaMask opens → Confirm → Money hits your wallet instantly<br>
+      <b>Your wallet:</b> 0x676c...59d0
+    </p>
   </div>
 </section>
-
-<!-- QR Library - Using unpkg instead of jsdelivr -->
-<script src="https://unpkg.com/qrcode@1.5.3/build/qrcode.min.js"></script>
-
-<script>
-// !!! SET YOUR WALLET HERE - THIS IS WHERE CLIENT MONEY GOES !!!
-const EFC_WALLET = "0xC5AD5cfcF81AD63a94227334b898eafCe6B27cCA"; 
-const EFC_TOKEN_ADDR = "0x677Ce9CBa67f7484ea951a12897CE780cFd8fED1";
-const USDT_ADDR = "0x55d398326f99059fF775485246999027B3197955";
-
-// Wait for page to load before adding click events
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('posGenerateBtn').addEventListener('click', runPOS);
-  document.getElementById('posCopyBtn').addEventListener('click', copyPOSLink);
-});
-
-let finalLink = '';
-
-async function runPOS() {
-  const item = document.getElementById('posItemInput').value;
-  const usd = parseFloat(document.getElementById('posAmountInput').value);
-  const token = document.getElementById('posTokenSelect').value;
-  const status = document.getElementById('posStatus');
-  
-  if (!usd || usd <= 0) { 
-    status.innerText = 'Enter valid USD amount'; 
-    status.style.color = '#f85149';
-    return; 
-  }
-  
-  if (EFC_WALLET === "0xYOUR_WALLET_ADDRESS_HERE") {
-    status.innerText = 'ERROR: Set EFC_WALLET in code first!';
-    status.style.color = '#f85149';
-    return;
-  }
-  
-  status.innerText = 'Creating payment link...';
-  status.style.color = '#f7b500';
-  
-  try {
-    let link = '';
-    let displayAmount = '';
-    
-    if (token === 'BNB') {
-      const res = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=BNBUSDT');
-      const data = await res.json();
-      const bnbPrice = parseFloat(data.price);
-      const bnbAmt = (usd / bnbPrice).toFixed(6);
-      const weiAmt = Math.floor(bnbAmt * 1e18);
-      link = `https://metamask.app.link/send/${EFC_WALLET}@56?value=${weiAmt}`;
-      displayAmount = `${bnbAmt} BNB ≈ $${usd}`;
-      
-    } else if (token === 'USDT') {
-      const usdtWei = Math.floor(usd * 1e18); // USDT on BSC has 18 decimals
-      link = `https://metamask.app.link/send/${USDT_ADDR}@56/transfer?address=${EFC_WALLET}&uint256=${usdtWei}`;
-      displayAmount = `${usd} USDT ≈ $${usd}`;
-      
-    } else if (token === 'EFC') {
-      const efcAmt = usd * 100; // CHANGE THIS: 1 USD = 100 EFC. Set your rate.
-      const efcWei = Math.floor(efcAmt * 1e18);
-      link = `https://metamask.app.link/send/${EFC_TOKEN_ADDR}@56/transfer?address=${EFC_WALLET}&uint256=${efcWei}`;
-      displayAmount = `${efcAmt} EFC ≈ $${usd}`;
-    }
-    
-    finalLink = link;
-    
-    // Make QR
-    const qrBox = document.getElementById('posQRBox');
-    qrBox.innerHTML = ''; // Clear old QR
-    QRCode.toCanvas(link, { width: 200, margin: 1 }, function (err, canvas) {
-      if (err) throw err;
-      qrBox.appendChild(canvas);
-    });
-    
-    document.getElementById('posAmountText').innerText = displayAmount;
-    document.getElementById('posPayLink').href = link;
-    document.getElementById('posPayLink').innerText = link;
-    document.getElementById('posOutput').style.display = 'block';
-    status.innerText = 'Ready! Send link to client or scan QR';
-    status.style.color = '#3fb950';
-    
-  } catch (error) {
-    status.innerText = 'Error: No internet or API down. Try again.';
-    status.style.color = '#f85149';
-    console.error(error);
-  }
-}
-
-function copyPOSLink() {
-  navigator.clipboard.writeText(finalLink).then(() => {
-    const btn = document.getElementById('posCopyBtn');
-    btn.innerText = 'Copied!';
-    setTimeout(() => { btn.innerText = 'Copy Link'; }, 2000);
-  });
-}
-</script>
-<!-- END POS V3 -->
+<!-- END POS V5 -->
 </body>
 </html>
